@@ -19,8 +19,10 @@ function App() {
     getTasks()
   }, [])
 
+  const baseUrl = 'https://my-json-server.typicode.com/aasalgado/react-task-tracker-server/tasks'
+
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch(baseUrl)
     const data = await res.json()
 
     return data;
